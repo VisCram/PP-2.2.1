@@ -13,6 +13,14 @@ public class Car {
     @Column(name = "series")
     private int series;
 
+    public Car() {
+    }
+
+    public Car(String model, int series) {
+        this.model = model;
+        this.series = series;
+    }
+
     public Long getId() {
         return id;
     }
@@ -21,12 +29,6 @@ public class Car {
         this.id = id;
     }
 
-    public Car() {}
-
-    public Car(String model, int series) {
-        this.model=model;
-        this.series=series;
-    }
     public String getModel() {
         return model;
     }
@@ -45,7 +47,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return   model + '\'' +
+        return model + '\'' +
                 ", series=" + series +
                 '}';
     }
